@@ -1,0 +1,9 @@
+# MSVC 中間生成物
+*.obj
+*.exp
+*.lib
+*.pdb
+*.ilk
+
+# ビルドログ
+*.log

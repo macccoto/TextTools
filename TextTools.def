@@ -1,0 +1,17 @@
+; TextTools.def
+; -------------
+; モジュール定義ファイル。
+;
+; 目的:
+;   32bit ビルドで __stdcall を使うと、リンカが自動的に
+;   "_NormalizeTextW@12" という装飾名でエクスポートしてしまう。
+;   VBA の Declare 文は装飾なしの "NormalizeTextW" を探すため、
+;   .def ファイルで装飾なしの名前を明示的に指定する。
+;
+;   64bit ビルドでは __stdcall の装飾は付かないが、
+;   .def ファイルを使っても問題ない（両方に使い回せる）。
+
+LIBRARY TextTools
+
+EXPORTS
+    NormalizeTextW
